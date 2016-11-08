@@ -8,7 +8,17 @@
         <form>
             <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
             <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
-            <button  id="valider" name ="valider">Valider</button>
+            <button  onclick="maj()" id="valider" name ="valider">Valider</button>
         </form>
+        <script>
+          function maj(){
+            var p1 = document.getElementById('premier_nombre').value;
+            var p2 = document.getElementById('deuxieme_nombre').value;
+                p1 = parseInt(p1);
+                p2 = parseInt(p2);
+                result = p1 * p2;
+              alert("Le résultat est de " + result);
+          }
+        </script>
     </body>
 </html>

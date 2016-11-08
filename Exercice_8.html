@@ -7,7 +7,26 @@
     <body>
         <form>
             <label for="age">Votre âge : </label><input type="text" id="age" name="age"/><br/>
-            <button id="valider" name="valider">Valider</button>
+            <button onclick="v()" id="valider" name="valider">Valider</button>
         </form>
+        <script>
+        function v(){
+          var a = document.getElementById('age').value;
+
+          if (18 <= a && a <= 60) {
+            alert("Vous êtes Majeur");
+          }
+          else if (1 <= a && a <= 17) {
+            alert("Vous êtes Mineur");
+          }
+          else if (61 <= a && a <= 100){
+            alert("Vous êtes Âgés")
+          }
+          else {
+            alert("Cette âge existe ?");
+          }
+        }
+
+        </script>
     </body>
 </html>

@@ -8,7 +8,22 @@
         <form>
             <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
             <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
-            <button id="valider" name="valider">Valider</button>
+            <button onclick="maj()"id="valider" name="valider">Valider</button>
         </form>
+        <script>
+          function maj(){
+            var p = document.getElementById('pointure').value;
+                p = parseInt(p);
+                a = document.getElementById('annee').value;
+                a = parseInt(a);
+              result = p * 2;
+              result += 5;
+              result = result * 50;
+              result -= a;
+              result += 1766;
+            alert(result);
+
+          }
+        </script>
     </body>
 </html>
